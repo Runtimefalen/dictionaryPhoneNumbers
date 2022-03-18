@@ -1,0 +1,12 @@
+﻿using System;
+using NotebookApp;
+var noteBook  = new Notebook();
+noteBook.Create("Alb", "Eduardovich", "Khachaturov", "89284731822");
+noteBook.Create("Dave", "Dorvardovich", "Khndzrtsyan", "89183429754");
+noteBook.Create("Ivan", "Alexandrovich", "Dmitrichenko", "89504564332");
+var keys = noteBook.List();
+Console.WriteLine(string.Join(", ", keys));
+noteBook.Remove("Dmitrichenko I. A.");
+keys = noteBook.List();
+Console.WriteLine(string.Join(", ", keys));
+Console.ReadLine();
